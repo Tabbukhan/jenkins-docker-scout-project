@@ -3,7 +3,9 @@ pipeline {
   environment {
         DOCKER_HUB = credentials('DOCKER-CREDS')
         //IMAGE_TAG  = 'myorg/scout-demo-service:latest'
-        IMAGE_TO_SCAN='golang:1.11.0-alpine'
+        //IMAGE_TO_SCAN='golang:1.11.0-alpine'
+        IMAGE_TO_SCAN='tabasumkhan534/demo-app:latest'
+
   }
   stages {
     stage('verify docker scout') {
