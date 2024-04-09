@@ -20,7 +20,7 @@ pipeline {
     }
     stage('Login to Docker Hub') {
       steps {
-        sh 'echo $dockertocken | docker login -u $docker-user --password-stdin'
+        sh 'echo $DOCKER_ACCESS_TOKEN | docker login -u $DOCKER_ACCESS_USER --password-stdin'
       }
     }
     stage('pull a problematic image') {
