@@ -21,7 +21,9 @@ pipeline {
     }
     stage('Login to Docker Hub') {
       steps {
-        sh 'echo $DOCKER_ACCESS_TOKEN | docker login -u $DOCKER_ACCESS_USER --password $DOCKER_ACCESS_TOKEN'
+         // Log into Docker Hub
+         sh 'echo $DOCKER_HUB_PSW | docker login -u $DOCKER_HUB_USR --password-stdin'
+        //sh 'echo $DOCKER_ACCESS_TOKEN | docker login -u $DOCKER_ACCESS_USER --password $DOCKER_ACCESS_TOKEN'
       }
     }
     stage('pull a problematic image') {
