@@ -1,7 +1,7 @@
 pipeline {
   agent any
   environment {
-    DH_CREDS=credentials('dh-creds')
+    //DH_CREDS=credentials('dh-creds')
     IMAGE_TO_SCAN='golang:1.11.0-alpine'
   }
   stages {
