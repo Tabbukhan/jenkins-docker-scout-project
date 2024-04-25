@@ -48,6 +48,11 @@ pipeline {
         sh "docker scout recommendations $IMAGE_TO_SCAN"
       }
     }
+    stage('trivy scan') {
+      steps{
+        sh "trivy $IMAGE_TO_SCAN"
+      }
+    }
   }
   post {
     always {
