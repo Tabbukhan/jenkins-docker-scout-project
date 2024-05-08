@@ -42,7 +42,7 @@ pipeline {
       steps {
         sh 'docker scout cves --help'
       }
-    }
+    }  
     stage('view the recommendations') {
       steps {
         sh "docker scout recommendations $IMAGE_TO_SCAN"
